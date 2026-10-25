@@ -10,6 +10,8 @@ The recorded Lagos run uses the dry-season imagery to train and applies the mode
 
 `docs/METHODOLOGY.md` details the satellite processing, label construction, split design, baselines, and metric definitions. `outputs/` and `results/` preserve run summaries, tree rules, maps, and reproducibility records. The Lagos results use real exported Sentinel-2 imagery and JRC labels; `src/waterdet/synthetic.py` creates a separate known-truth synthetic world for pipeline tests and does not supply the reported Lagos data.
 
+For deeper implementation terminology—including raster alignment, label sampling, the one-standard-error tree-selection rule, area calculations, and test design—see [Technical notes](docs/TECHNICAL_NOTES.md).
+
 ## Run
 
 ```sh
