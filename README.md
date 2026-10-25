@@ -8,7 +8,7 @@ Google Earth Engine supplies Sentinel-2 L2A surface reflectance (`COPERNICUS/S2_
 
 The recorded Lagos run uses the dry-season imagery to train and applies the model to dry and wet composites. Its primary GSW-label run reports a depth-2 tree and **98.52% agreement with JRC-derived labels on held-out spatial blocks** (95% block-bootstrap interval 96.9-99.5%). The strongest same-sample threshold baseline, MNDWI Otsu, reports 98.79% agreement. The run maps 230.10 km2 of water in the dry composite and 236.88 km2 in the wet composite, with 10.56 km2 classified as gained and 3.80 km2 as lost on comparable coverage. These are comparisons against the historical label source, not a manually labelled ground survey.
 
-`docs/METHODOLOGY.md` details the satellite processing, label construction, split design, baselines, and metric definitions. `outputs/` and `results/` preserve run summaries, tree rules, maps, and reproducibility records. `src/waterdet/synthetic.py` creates a separate known-truth synthetic world for pipeline tests; the recorded Lagos result is from exported satellite imagery.
+`docs/METHODOLOGY.md` details the satellite processing, label construction, split design, baselines, and metric definitions. `outputs/` and `results/` preserve run summaries, tree rules, maps, and reproducibility records. The Lagos results use real exported Sentinel-2 imagery and JRC labels; `src/waterdet/synthetic.py` creates a separate known-truth synthetic world for pipeline tests and does not supply the reported Lagos data.
 
 ## Run
 
